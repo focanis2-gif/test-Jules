@@ -29,7 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
             passengers
         });
 
-        // Redirect to the confirmation page
-        window.location.href = `confirmation.html?${queryParams.toString()}`;
+        // --- GSAP Animation ---
+        const overlay = document.getElementById('transition-overlay');
+        const plane = document.getElementById('transition-plane');
+        const trail = document.getElementById('transition-trail');
+
+        const tl = gsap.timeline({
+            onComplete: () => {
+                // Redirect after the animation is complete
+                window.location.href = `confirmation.html?${queryParams.toString()}`;
+            }
+        });
+
+        tl.set(overlay, { autoAlpha: 1 })
+          .to(plane, {
+              duration: 1.5,
+              y: -(window.innerHeight + 150), // Fly plane off the top of the screen
+              ease: 'power2.in'
+          }, 0)
+          .to(trail, {
+              duration: 1.5,
+              borderLeftWidth: '150vw',
+              borderRightWidth: '150vw',
+              borderBottomWidth: '100vh',
+              ease: 'power2.in'
+          }, 0);
     });
 });

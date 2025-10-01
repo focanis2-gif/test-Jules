@@ -4,25 +4,32 @@ document.addEventListener('DOMContentLoaded', () => {
     bookingForm.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent the form from submitting the traditional way
 
-        const departure = document.getElementById('departure').value;
-        const arrival = document.getElementById('arrival').value;
+        const departureSelect = document.getElementById('departure');
+        const departure = departureSelect.options[departureSelect.selectedIndex].text;
+
+        const arrivalSelect = document.getElementById('arrival');
+        const arrival = arrivalSelect.options[arrivalSelect.selectedIndex].text;
+
         const departureDate = document.getElementById('departure-date').value;
+        const returnDate = document.getElementById('return-date').value;
         const passengers = document.getElementById('passengers').value;
 
         // Basic validation
-        if (!departure || !arrival || !departureDate || !passengers) {
+        if (!departureSelect.value || !arrivalSelect.value || !departureDate || !passengers) {
             alert('Please fill out all required fields.');
             return;
         }
 
-        const confirmationMessage = `Thank you for booking with Focanis Airlines!
+        // Construct the query string
+        const queryParams = new URLSearchParams({
+            departure,
+            arrival,
+            departureDate,
+            returnDate,
+            passengers
+        });
 
-Your flight from ${departure} to ${arrival} on ${departureDate} for ${passengers} passenger(s) has been requested.
-
-A confirmation email will be sent to you shortly.`;
-
-        alert(confirmationMessage);
-
-        bookingForm.reset(); // Clear the form
+        // Redirect to the confirmation page
+        window.location.href = `confirmation.html?${queryParams.toString()}`;
     });
 });

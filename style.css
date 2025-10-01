@@ -20,7 +20,7 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#booking {
+#booking, #confirmation-details {
     padding: 1rem;
 }
 
@@ -61,22 +61,6 @@ h2 {
     color: #aaa;
 }
 
-/* Animation for the booking form */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#booking {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
 button {
     background-color: #ff6600;
     color: white;
@@ -91,4 +75,36 @@ button {
 button:hover {
     background-color: #e65c00;
     transform: scale(1.05);
+}
+
+/* --- Confirmation Page Styles --- */
+#confirmation-details {
+    text-align: center;
+}
+
+#confirmation-message {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.back-link {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #002244;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: none; /* Add display none to prevent layout shifts */
 }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focanis Airlines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Focanis Airlines</h1>
+        <h1><i class="fas fa-plane"></i> Focanis Airlines</h1>
     </header>
     <main>
         <section id="booking">
@@ -16,77 +17,92 @@
             <form id="booking-form">
                 <div class="form-group">
                     <label for="departure">Departure:</label>
-                    <select id="departure" name="departure" required>
-                        <option value="" disabled selected>Select a city</option>
-                        <option value="JFK">New York (JFK)</option>
-                        <option value="LHR">London (LHR)</option>
-                        <option value="CDG">Paris (CDG)</option>
-                        <option value="HND">Tokyo (HND)</option>
-                        <option value="DXB">Dubai (DXB)</option>
-                        <option value="LAX">Los Angeles (LAX)</option>
-                        <option value="SIN">Singapore (SIN)</option>
-                        <option value="HKG">Hong Kong (HKG)</option>
-                        <option value="FRA">Frankfurt (FRA)</option>
-                        <option value="AMS">Amsterdam (AMS)</option>
-                        <option value="IST">Istanbul (IST)</option>
-                        <option value="ICN">Seoul (ICN)</option>
-                        <option value="DEN">Denver (DEN)</option>
-                        <option value="PVG">Shanghai (PVG)</option>
-                        <option value="SYD">Sydney (SYD)</option>
-                        <option value="YYZ">Toronto (YYZ)</option>
-                        <option value="MEX">Mexico City (MEX)</option>
-                        <option value="GRU">São Paulo (GRU)</option>
-                        <option value="JNB">Johannesburg (JNB)</option>
-                        <option value="CAI">Cairo (CAI)</option>
-                        <option value="BOM">Mumbai (BOM)</option>
-                        <option value="PEK">Beijing (PEK)</option>
-                        <option value="FCO">Rome (FCO)</option>
-                        <option value="MAD">Madrid (MAD)</option>
-                        <option value="ORD">Chicago (ORD)</option>
-                    </select>
+                    <div class="input-with-icon">
+                        <i class="fas fa-plane-departure"></i>
+                        <select id="departure" name="departure" required>
+                            <option value="" disabled selected>Select a city</option>
+                            <option value="JFK">New York (JFK)</option>
+                            <option value="LHR">London (LHR)</option>
+                            <option value="CDG">Paris (CDG)</option>
+                            <option value="HND">Tokyo (HND)</option>
+                            <option value="DXB">Dubai (DXB)</option>
+                            <option value="LAX">Los Angeles (LAX)</option>
+                            <option value="SIN">Singapore (SIN)</option>
+                            <option value="HKG">Hong Kong (HKG)</option>
+                            <option value="FRA">Frankfurt (FRA)</option>
+                            <option value="AMS">Amsterdam (AMS)</option>
+                            <option value="IST">Istanbul (IST)</option>
+                            <option value="ICN">Seoul (ICN)</option>
+                            <option value="DEN">Denver (DEN)</option>
+                            <option value="PVG">Shanghai (PVG)</option>
+                            <option value="SYD">Sydney (SYD)</option>
+                            <option value="YYZ">Toronto (YYZ)</option>
+                            <option value="MEX">Mexico City (MEX)</option>
+                            <option value="GRU">São Paulo (GRU)</option>
+                            <option value="JNB">Johannesburg (JNB)</option>
+                            <option value="CAI">Cairo (CAI)</option>
+                            <option value="BOM">Mumbai (BOM)</option>
+                            <option value="PEK">Beijing (PEK)</option>
+                            <option value="FCO">Rome (FCO)</option>
+                            <option value="MAD">Madrid (MAD)</option>
+                            <option value="ORD">Chicago (ORD)</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="arrival">Arrival:</label>
-                    <select id="arrival" name="arrival" required>
-                        <option value="" disabled selected>Select a city</option>
-                        <option value="JFK">New York (JFK)</option>
-                        <option value="LHR">London (LHR)</option>
-                        <option value="CDG">Paris (CDG)</option>
-                        <option value="HND">Tokyo (HND)</option>
-                        <option value="DXB">Dubai (DXB)</option>
-                        <option value="LAX">Los Angeles (LAX)</option>
-                        <option value="SIN">Singapore (SIN)</option>
-                        <option value="HKG">Hong Kong (HKG)</option>
-                        <option value="FRA">Frankfurt (FRA)</option>
-                        <option value="AMS">Amsterdam (AMS)</option>
-                        <option value="IST">Istanbul (IST)</option>
-                        <option value="ICN">Seoul (ICN)</option>
-                        <option value="DEN">Denver (DEN)</option>
-                        <option value="PVG">Shanghai (PVG)</option>
-                        <option value="SYD">Sydney (SYD)</option>
-                        <option value="YYZ">Toronto (YYZ)</option>
-                        <option value="MEX">Mexico City (MEX)</option>
-                        <option value="GRU">São Paulo (GRU)</option>
-                        <option value="JNB">Johannesburg (JNB)</option>
-                        <option value="CAI">Cairo (CAI)</option>
-                        <option value="BOM">Mumbai (BOM)</option>
-                        <option value="PEK">Beijing (PEK)</option>
-                        <option value="FCO">Rome (FCO)</option>
-                        <option value="MAD">Madrid (MAD)</option>
-                        <option value="ORD">Chicago (ORD)</option>
-                    </select>
+                    <div class="input-with-icon">
+                        <i class="fas fa-plane-arrival"></i>
+                        <select id="arrival" name="arrival" required>
+                            <option value="" disabled selected>Select a city</option>
+                            <option value="JFK">New York (JFK)</option>
+                            <option value="LHR">London (LHR)</option>
+                            <option value="CDG">Paris (CDG)</option>
+                            <option value="HND">Tokyo (HND)</option>
+                            <option value="DXB">Dubai (DXB)</option>
+                            <option value="LAX">Los Angeles (LAX)</option>
+                            <option value="SIN">Singapore (SIN)</option>
+                            <option value="HKG">Hong Kong (HKG)</option>
+                            <option value="FRA">Frankfurt (FRA)</option>
+                            <option value="AMS">Amsterdam (AMS)</option>
+                            <option value="IST">Istanbul (IST)</option>
+                            <option value="ICN">Seoul (ICN)</option>
+                            <option value="DEN">Denver (DEN)</option>
+                            <option value="PVG">Shanghai (PVG)</option>
+                            <option value="SYD">Sydney (SYD)</option>
+                            <option value="YYZ">Toronto (YYZ)</option>
+                            <option value="MEX">Mexico City (MEX)</option>
+                            <option value="GRU">São Paulo (GRU)</option>
+                            <option value="JNB">Johannesburg (JNB)</option>
+                            <option value="CAI">Cairo (CAI)</option>
+                            <option value="BOM">Mumbai (BOM)</option>
+                            <option value="PEK">Beijing (PEK)</option>
+                            <option value="FCO">Rome (FCO)</option>
+                            <option value="MAD">Madrid (MAD)</option>
+                            <option value="ORD">Chicago (ORD)</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="departure-date">Departure Date:</label>
-                    <input type="date" id="departure-date" name="departure-date" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="departure-date" name="departure-date" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="return-date">Return Date:</label>
-                    <input type="date" id="return-date" name="return-date">
+                    <div class="input-with-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="return-date" name="return-date">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="passengers">Passengers:</label>
-                    <input type="number" id="passengers" name="passengers" min="1" value="1" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="number" id="passengers" name="passengers" min="1" value="1" required>
+                    </div>
                 </div>
                 <button type="submit">Book Now</button>
             </form>
